@@ -1,0 +1,1 @@
+GitHub Repo Radar is a lightweight web app that fetches and displays GitHub repositories for any user. Built with pure JavaScript, it shows key repository details.

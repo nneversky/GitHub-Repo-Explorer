@@ -1,0 +1,150 @@
+:root {
+    --bg-color: #C4C4C4;
+    --font-color: #000000;
+    --bg-color-el-list: #E3E3E3;
+    --hover-el-list: #65CDF9;
+    --hover-form-input: #ffffff62;
+    --repo-el: #E27BEB;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto-Light"),
+      local("Roboto-Light"),
+      url('./src/fonts/Roboto-Light.woff') format("woff");
+    font-weight: normal;
+  }
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: var(--font-color);
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    align-self: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 661px;
+    height: 763px;
+    background-color: var(--bg-color);
+    display: flex;
+}
+
+.autocomplete__form {
+    padding-top: 60px;
+    justify-content: center;
+    width: 500px;
+    height: 281px;
+}
+
+.form__input {
+    box-sizing: border-box;
+    transition: all 300ms ease-in-out;
+    padding-left: 9px;
+    color: var(--font-color);
+    width: 100%;
+    height: 61px;
+    border: none;
+    font-size: 48px;
+}
+
+.form__input:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 14px 5px rgba(34, 60, 80, 0.2);
+}
+
+.form__list {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes createSlide {
+    from {
+      opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+
+.list__el {
+    animation: 70ms ease-in-out createSlide;
+    transition: all 150ms ease-in-out;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: 100%;
+    height: 44px;
+    background-color: var(--bg-color-el-list);
+    border: 2px solid var(--font-color);
+    border-bottom: none;
+    font-size: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.list__el:last-child {
+    border-bottom: 2px solid var(--font-color);
+}
+
+.list__el:hover {
+    height: 50px;
+    background-color: var(--hover-el-list);
+}
+
+.list__repo--liked {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    position: absolute;
+    width: 503px;
+    height: 303px;
+    margin-bottom: 60px;
+}
+
+.repo__el {
+    animation: 70ms ease-in-out createSlide;
+    border: 1px var(--font-color) solid;
+    border-bottom: none;
+    width: 100%;
+    height: 101px;
+    background-color: var(--repo-el);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.repo__el:last-child {
+    border-bottom: 1px var(--font-color) solid;
+}
+
+
+.el__owner,
+.el__name,
+.el__stars {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+.del__btn {
+    transform: translateX(-20px);
+    cursor: pointer;
+    position: absolute;
+    align-self: flex-end;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    background: url('./src/img/del.svg');
+    background-repeat: no-repeat;
+}
