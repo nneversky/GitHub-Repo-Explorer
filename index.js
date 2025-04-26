@@ -49,7 +49,7 @@ const debFunc = () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
       searchRepo(formInput.value);
-    }, 400);
+    }, 700);
   };
 };
 
